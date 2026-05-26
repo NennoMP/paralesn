@@ -1,0 +1,49 @@
+# adapted from
+# https://github.com/gc-os-ai/pyaptamer/blob/main/.github/workflows/test.yml
+
+name: code-quality
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+    - 'assets/**, data/**, experiments/results/**'
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+    - 'assets/**, data/**, experiments/results/**'
+
+jobs:
+  code-quality:
+    name: code-quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository with full history
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: python environment step
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: install pre-commit
+        run: python3 -m pip install pre-commit
+
+      - name: get changed files
+        id: changed-files
+        run: |
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | tr '\n' ' ')
+          echo "CHANGED_FILES=${CHANGED_FILES}" >> $GITHUB_ENV
+
+      - name: print changed files
+        run: |
+          echo "Changed files: $CHANGED_FILES"
+
+      - name: run pre-commit on changed files
+        run: |
+          if [ -n "$CHANGED_FILES" ]; then
+            pre-commit run --color always --files $CHANGED_FILES --show-diff-on-failure
+          else
+            echo "No changed files to check."
+          fi
