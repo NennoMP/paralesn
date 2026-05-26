@@ -2,9 +2,8 @@
 
 # Your paper title here
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
-[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/xxxx.xxxxx)
-[![DOI](https://img.shields.io/badge/DOI-xx.xxxx/xxxxx-blue.svg)](https://doi.org/xx.xxxx/xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2601.22296)
+[![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2601.22296)
 
 ![code-quality](https://github.com/nennomp/research-code-template/actions/workflows/code-quality.yml/badge.svg)
 [![license](https://img.shields.io/badge/License-MIT-green.svg?labelColor=gray)](https://github.com/nennomp/research-code-template)
@@ -14,16 +13,16 @@
 This repository contains the official code for the paper:
 
 ```
-Your paper title here,
-Author1, Author2, Author 3,
-Proceedings of Conference (Acronym), 20xx.
+ParalESN: Enabling parallel information processing in Reservoir Computing,
+Matteo Pinna, Giacomo Lagomarsini, Andrea Ceni, Claudio Gallicchio,
+International Conference on Machine Learning (ICML), 2026.
 ```
 
 ## Abstract
-Your abstract goes here.
+Reservoir Computing (RC) has established itself as an efficient paradigm for temporal processing. However, its scalability remains severely constrained by the need to process temporal data sequentially and the prohibitive memory footprint of high-dimensional reservoirs. To address these limitations, we revisit RC through the lens of structured operators and state space modeling, introducing Parallel Echo State Network (ParalESN). Leveraging diagonal linear recurrence in the complex domain, ParalESN enables parallel processing of temporal data and the construction of efficient, high-dimensional reservoirs. A thorough theoretical analysis demonstrates that the Echo State Property and the universality guarantees of traditional Echo State Networks are preserved, while also admitting an equivalent representation of arbitrary linear reservoirs in the complex diagonal form. Empirically, ParalESN achieves competitive predictive accuracy with traditional RC and with fully trainable sequence models, while delivering computational savings by orders of magnitude. Overall, ParalESN offers a scalable and principled pathway for integrating RC within the deep learning landscape.
 
 <div align="center">
-<img src="assets/figure-1.png?raw=true" alt="Model" title="Model">
+<img src="assets/paralesn.png?raw=true" alt="ParalESN" title="ParalESN">
 <br>
 <figcaption><em>
 <strong>Short caption title.</strong> Your caption text goes here.
@@ -33,21 +32,21 @@ Your abstract goes here.
 ## Setup
 To install the required dependencies:
 ```
-conda create -n envname python=3.12
-conda activate envname
+conda create -n paralesn python=3.12
+conda activate paralesn
 pip install -e .
 ```
 
-## Running the experiments
-Instructions on how to reproduce/run the experiments in the paper.
+## Experiments
+TODO
 
 ## Citation
 If you use the model or code in this repository, consider citing our paper:
 ```
-@article{dummy2025dummy,
-  title={A dummy paper title},
-  author={Author1, Author2, Author 3},
-  journal={A dummy journal},
-  year={20xx}
+@article{pinna2026paralesn,
+  title={ParalESN: Enabling parallel information processing in Reservoir Computing},
+  author={Pinna, Matteo and Lagomarsini, Giacomo and Ceni, Andrea and Gallicchio, Claudio},
+  journal={arXiv preprint arXiv:2601.22296},
+  year={2026}
 }
 ```

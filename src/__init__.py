@@ -1,3 +1,3 @@
-"""Official code for the paper `YOUR PAPER TITLE HERE`"""
+"""Official code for the paper ParalESN."""
 
 __version__ = 0.1
