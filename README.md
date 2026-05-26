@@ -2,7 +2,7 @@
 
 # Your paper title here
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-b31b1b.svg)](https://arxiv.org/abs/2601.22296)
+[![arXiv](https://img.shields.io/badge/arXiv-2601.22296-b31b1b.svg)](https://arxiv.org/abs/2601.22296)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2601.22296)
 
 ![code-quality](https://github.com/nennomp/research-code-template/actions/workflows/code-quality.yml/badge.svg)
@@ -23,10 +23,6 @@ Reservoir Computing (RC) has established itself as an efficient paradigm for tem
 
 <div align="center">
 <img src="assets/paralesn.png?raw=true" alt="ParalESN" title="ParalESN">
-<br>
-<figcaption><em>
-<strong>Short caption title.</strong> Your caption text goes here.
-</em></figcaption>
 </div>
 
 ## Setup
